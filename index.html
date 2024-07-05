@@ -1,19 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Tailwind Project</title>
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/tailwind.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tailwind Project</title>
+    <link rel="stylesheet" href="styles/tailwind.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <!-- Development version -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
-</head>
-<body class="bg-gray-100 text-gray-800">
-  <div class="container mx-auto p-4">
-    <h1 class="text-4xl font-bold mb-4">Hello, Tailwind!</h1>
-    <p class="mb-4">This is a simple project setup with HTML, CSS, JS, and Tailwind CSS.</p>
-    <button id="clickMe" class="bg-blue-500 text-white px-4 py-2 rounded">Click Me</button>
-  </div>
-  <script src="js/main.js"></script>
-</body>
+  <!-- Production version -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <body class="bg-gray-100 text-gray-800">
+      <!-- ==============ads-header=================== -->
+    <div class="bg-[#f3ff34] h-10 py-4 flex justify-center items-center">ddwjdwjk</div>
+
+      <!-- ==============Header=================== -->
+    <div class="bg-[#282828] h-20 px-10 flex justify-between items-center">
+      <h1 class="uppercase font-extrabold text-2xl tracking-widest text-white">
+        focal
+      </h1>
+      <!-- ==============nav-links=================== -->
+      <ul class="flex justify-between gap-6 text-white max-w-[70%] text-sm font-medium">
+        <li>Shop by Category</li>
+        <li>Shop by Device</li>
+        <li>Collections</li>
+        <li>Blog</li>
+      </ul>
+      <!-- ================tools===================== -->
+      <div class="flex gap-5 text-white">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-mail"
+        >
+          <rect width="20" height="16" x="2" y="4" rx="2" />
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-search"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.3-4.3" />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-user"
+        >
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+          <circle cx="12" cy="7" r="4" />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-shopping-bag"
+        >
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+          <path d="M3 6h18" />
+          <path d="M16 10a4 4 0 0 1-8 0" />
+        </svg>
+      </div>
+    </div>
+      <!-- Slider main container -->
+      <div class="swiper h-[82.5vh]">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide slide-one"></div>
+
+          <div class="swiper-slide">
+            <div class="slide-two-left h-full w-[50%] inline-block"></div>
+            <div class="slide-two-right h-full w-[50%] inline-block"></div>
+          </div>
+
+          <div class="swiper-slide slide-three"></div>
+
+          <div class="swiper-slide">
+            <div class="slide-four-left h-full w-[50%] inline-block"></div>
+            <div class="slide-four-right h-full w-[50%] inline-block"></div>
+          </div>
+
+          <div class="swiper-slide slide-five h-full w-full"></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>

@@ -3,3 +3,37 @@
 @tailwind utilities;
 
 /* Your custom styles here */
+.swiper-pagination-bullet {
+  background-color: #fff !important;
+  opacity: 40% !important;
+  width: 75px!important;
+  height: 2px!important;
+  border-radius: 0px!important;
+}
+.swiper-pagination-bullet-active {
+  opacity: 100% !important;
+
+}
+
+
+.slide-one{
+  background-image: url('/img/1.png ');
+}
+.slide-two-left{
+  background-image: url('/img/2.png ');
+}
+.slide-two-right{
+  background-image: url('/img/22.png ');
+}
+.slide-three{
+  background-image: url('/img/3.png ');
+}
+.slide-four-right{
+  background-image: url('/img/4.png ');
+}
+.slide-four-left{
+  background-image: url('/img/44.png ');
+}
+.slide-five{
+  background-image: url('/img/5.png ');
+}
