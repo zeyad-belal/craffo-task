@@ -617,10 +617,6 @@ video {
   left: -100px;
 }
 
-.left-\[63\%\] {
-  left: 63%;
-}
-
 .top-1\/2 {
   top: 50%;
 }
@@ -864,6 +860,11 @@ video {
   padding-right: 2rem;
 }
 
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -872,11 +873,6 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .text-center {
@@ -1115,10 +1111,6 @@ li.active .submenu {
   display: block;
 }
 
-li{
-  margin-bottom: 15px;
-}
-
 @media (min-width: 640px) {
   .sm\:px-24 {
     padding-left: 6rem;
@@ -1161,3 +1153,4 @@ li{
     padding-right: 12rem;
   }
 }
+
