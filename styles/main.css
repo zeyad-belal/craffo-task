@@ -4,36 +4,145 @@
 
 /* Your custom styles here */
 .swiper-pagination-bullet {
-  background-color: #fff !important;
-  opacity: 40% !important;
-  width: 75px!important;
-  height: 2px!important;
-  border-radius: 0px!important;
+  background-color: #d2d2d2 !important;
+  opacity: 100%!important;
+  width: 75px !important;
+  height: 2.5px !important;
+  border-radius: 0px !important;
+  position: relative; /* Ensure pseudo-element is positioned correctly */
 }
+
 .swiper-pagination-bullet-active {
-  opacity: 100% !important;
+  background-color: #d2d2d2 !important;
+  opacity: 100%!important;
 
+  position: relative; /* Ensure pseudo-element is positioned correctly */
+  overflow: hidden; /* Ensure pseudo-element stays within bounds */
+}
+
+.swiper-pagination-bullet-active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #fff; /* Color of the filling element */
+  opacity: 100%;
+  z-index: 999; /* Place it behind the bullet */
+  animation: fillBullet 4.2s linear forwards; /* Animation settings */
+}
+
+@keyframes fillBullet {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 
-.slide-one{
-  background-image: url('/img/1.png ');
+
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: #fff;
+  bottom: -3px;
+  left: 0;
+  display: block;
+  visibility: hidden;
+  transition: all 0.3s;
 }
-.slide-two-left{
-  background-image: url('/img/2.png ');
+
+.nav-item:hover::before {
+  visibility: visible;
+  width: 100%;
+  left: 0;
 }
-.slide-two-right{
-  background-image: url('/img/22.png ');
+
+.bg-img{
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
 }
-.slide-three{
-  background-image: url('/img/3.png ');
+
+.bg-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.102); /* Light black overlay */
+  z-index: 1;
 }
-.slide-four-right{
-  background-image: url('/img/4.png ');
+
+
+
+
+button{
+  cursor: pointer !important;
 }
-.slide-four-left{
-  background-image: url('/img/44.png ');
+
+
+#toggleArrows {
+  right: 1rem; /* Adjust position as needed */
 }
-.slide-five{
-  background-image: url('/img/5.png ');
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #333; /* Adjust color as needed */
+}
+
+button:hover {
+  color: #000; /* Adjust hover color as needed */
+}
+
+
+.slide-one {
+  background-image: url("/img/1.png");
+  background-position: center;
+}
+.slide-two-left {
+  background-image: url("/img/22.png");
+}
+.slide-two-right {
+  background-image: url("/img/2.png");
+}
+.slide-three {
+  background-image: url("/img/3.png");
+}
+.slide-four-right {
+
+  background-image: url("/img/4.png");
+}
+.slide-four-left {
+  background-image: url("/img/44.png ");
+}
+.slide-five {
+  background-image: url("/img/5.png ");
+  background-position: center;
+}
+
+
+
+/* Hidden submenu styles */
+.submenu {
+  display: none;
+}
+
+/* Show submenu on li click */
+li.active .submenu {
+  display: block;
+}
+
+li{
+  margin-bottom: 15px;
 }
